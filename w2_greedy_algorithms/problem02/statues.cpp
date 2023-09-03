@@ -16,9 +16,8 @@ int main() {
   }
 
   int i = 0;
-  int g = 0;
   int aux = 0;
-
+  int g = 0;
   while (i < n) {
     g++;
     // posicao de partida : mais à esquerda possivel
