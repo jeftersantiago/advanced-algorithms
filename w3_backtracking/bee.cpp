@@ -3,8 +3,7 @@
 
 using namespace std;
 
-void find_subsets(vector<int> v, vector<vector<int>> &subsets, vector<int> &s,
-                  int k) {
+void find_subsets(vector<int> v, vector<vector<int>> &subsets, vector<int> &s, int k) {
   subsets.push_back(s);
 
   for (int i = k; i < v.size(); i++) {
