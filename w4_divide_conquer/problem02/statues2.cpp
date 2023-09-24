@@ -74,7 +74,6 @@ void find_radious(vector<int64_t> &v, int64_t &R, int64_t k) {
       l = center + 1;
   }
 }
-
 int main() {
   int64_t n, k;
   cin >> n >> k;
