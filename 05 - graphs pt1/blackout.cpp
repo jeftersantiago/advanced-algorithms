@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef pair<int64_t, int64_t> PairInt;
-typedef vector<vector<pair<int64_t, int64_t>>> ADJList;
+typedef vector<vector<PairInt>> ADJList;
 
 void print_graph(const ADJList adjList) {
   int64_t i = 1;

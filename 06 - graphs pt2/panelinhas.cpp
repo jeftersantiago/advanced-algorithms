@@ -82,13 +82,3 @@ int main() {
   cout << endl;
   return 0;
 }
-/**
-void print_graph(vvi &adj) {
-  for (int64_t x = 1; x < adj.size(); x++) {
-    cout << x << ": ";
-    for (const auto y : adj[x])
-      cout << y << " ";
-    cout << endl;
-  }
-}
-**/
