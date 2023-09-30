@@ -8,8 +8,6 @@ typedef vector<bool> vb;
 int64_t t = 0;
 vi d;
 vi low;
-vector<int64_t> node_cmp;
-
 /**
    passei horas debugando sei perceber que onstack nao estava sendo passada por
    referencia kkkkkkkkkk
