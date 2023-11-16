@@ -41,8 +41,7 @@ int solveRec(vector<int> v, int i) {
 // pd recursiva
 int solveRecPD(vector<int> v, int i) {
   if (MEMO[i] == -1)
-    MEMO[i] = min(solveRecPD(v, i - 1) + abs(v[i] - v[i - 1]),
-                  solveRecPD(v, i - 2) + abs(v[i] - v[i - 2]));
+    MEMO[i] = min(solveRecPD(v, i - 1) + abs(v[i] - v[i - 1]), solveRecPD(v, i - 2) + abs(v[i] - v[i - 2]));
   return MEMO[i];
 }
 

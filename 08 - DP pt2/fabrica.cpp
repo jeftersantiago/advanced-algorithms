@@ -1,30 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef vector<int> vi;
-typedef vector<vi> vii;
-
-void print(vii v) {
-  for (int i = 1; i < v.size(); ++i) {
-    cout << "\t";
-    for (int j = 1; j < v[i].size(); ++j)
-      cout << v[i][j] << " ";
-    cout << endl;
-  }
-}
+int n, k;
 
 int main() {
-
-  int n, k;
   cin >> n >> k;
 
-  vii v(n + 1, vi(k + 1, -1));
+  vector<vector<int>> cost(n + 1, vector<int>(k + 1, 0));
+  vector<vector<int>> memo(n + 1, vector<int>(k + 1, 0));
 
   for (int i = 1; i <= n; ++i)
     for (int j = 1; j <= k; ++j)
-      cin >> v[i][j];
+      cin >> cost[i][j];
 
-  cout << "Input: " << endl;
-  print(v);
-
+  for (int i = 1; i <= n; ++i)
+    for (int j = 1; j <= k; ++j) {
+      for (int m = 1; m <= k; ++m)
+        // n soma as consecutivas
+        if (m != j)
+          //                                          tinha iniciado memo com -1
+          //                                          -> troquei pra 0
+          memo[i][j] = max(memo[i][j], cost[i][m] + memo[i - 1][m]);
+      // preenchendo a memo
+    }
+  int x = 0;
+  for (int j = 1; j <= k; ++j)
+    // ultima linha tem os valores preenchidos
+    // encontra o maximo
+    x = max(x, memo[n][j]);
+  cout << x << endl;
+  // cout << memo[n][k-1] << endl;
   return 0;
 }
+// removendo versoes recursivas
