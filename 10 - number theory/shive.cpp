@@ -22,25 +22,9 @@ int main() {
     sieve.set(i);
   erastothenes_sieve(n);
 
-  /**
-  for (long_int i = 0; i < primes.size(); ++i)
-    cout << primes[i] << " ";
-  cout << endl;
-  **/
 
-  while (true) {
-    long_int x;
-    cin >> x;
+  
 
-    int y = 1;
-    for (long_int i = 2; i <= x; ++i)
-      if (x % i == 0)
-        y++;
 
-    if (y == 3)
-      cout << 1 << endl;
-    else
-      cout << 0 << endl;
-  }
   return 0;
 }
