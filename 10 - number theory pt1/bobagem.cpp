@@ -18,11 +18,10 @@ void load_sieve(int n) {
 }
 
 long long int has_3_divisors(long long int x) {
-  // ficou horroroso assim
-  // porém rodou em 2.33s com esse if.
+  // odeio que 4 = 2 * 2
   if (x == 4)
     return 1;
-  // e esse if.
+  // se par ret 0
   if (x % 2 != 0)
     for (long long int i = 0; i < primes.size(); ++i) {
       long long int fp = primes[i];
