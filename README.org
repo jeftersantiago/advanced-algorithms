@@ -1,0 +1,4 @@
+#+title: cpprogramming
+Codes of competitive programming. Mainly from courses i take.
+I just like cool algorithms.
+
