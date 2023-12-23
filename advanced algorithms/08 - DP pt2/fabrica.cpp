@@ -2,6 +2,12 @@
 using namespace std;
 int n, k;
 
+void test_function(int param){
+  for(int i=  0; i < param; ++i)
+    cout << "LKJFASLKJ" << endl;
+  cout << endl;
+}
+
 int main() {
   cin >> n >> k;
 

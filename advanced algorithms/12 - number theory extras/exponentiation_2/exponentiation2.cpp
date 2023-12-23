@@ -1,27 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long int li;
+const li mod = 1e9 + 7;
 
-long int m = 1e9 + 7;
-
-long long int exp(long int x, long int n) {
-  if (n == 0)
-    return 1 % m;
-  long long int u = exp(x, n / 2);
-  u = (u * u) % m;
-  if (n % 2 == 1)
-    u = (u * x) % m;
-  return u;
+li exp(li a, li b, li mod) {
+  li ans = 1;
+  while (b) {
+    if (b % 2 == 1)
+      ans = (ans * a) % mod;
+    a = (a * a) % mod;
+    b = b >> 1;
+  }
+  return ans;
 }
 
 int main() {
   int n;
-  long int a, b, c;
-  a = 7;
-  b = 8;
-  c = 10;
-  cout << exp(a, exp(b, c)) << endl;
-  //  cin >> n;
-  //  while (cin >> a >> b >> c)
-  //    cout << exp(a, exp(b, c)) << endl;
+  cin >> n;
+  long long a, b, c;
+  while (cin >> a >> b >> c)
+    // fermats lil theorem -> x^n % m = x^(n % (m - 1)) % m
+    cout << exp(a, exp(b, c, mod - 1), mod) << endl;
   return 0;
 }
