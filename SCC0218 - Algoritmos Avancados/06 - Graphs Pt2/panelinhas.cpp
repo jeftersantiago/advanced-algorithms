@@ -8,10 +8,12 @@ typedef vector<bool> vb;
 int64_t t = 0;
 vi d;
 vi low;
+
 /**
    passei horas debugando sei perceber que onstack nao estava sendo passada por
    referencia kkkkkkkkkk
  **/
+
 void tarjan(const vvi &adj, const int64_t u, vvi &scc, stack<int64_t> &st, vb &onstack) {
 
   d[u] = low[u] = t++;
